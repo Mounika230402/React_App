@@ -29,6 +29,7 @@ import './App.css';
 import { ButtonComponent } from "./components/button/button";
 import { Heading1,Heading2,Heading3,Heading4,Heading5,Heading6 } from './components/heading/headings';
 import { TableComponent } from './components/table/table';
+import { FormComponent } from './components/Forms/form';
 function App(){
   return (
     <div>
@@ -40,6 +41,7 @@ function App(){
       <Heading5></Heading5>
       <Heading6></Heading6>
       <TableComponent></TableComponent>
+      <div><FormComponent /></div>
     </div>
   )
 }

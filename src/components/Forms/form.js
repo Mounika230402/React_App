@@ -1,9 +1,29 @@
 export const FormComponent=()=>{
     return <form>
-        <label for="name">Name</label>
-        <br/>
-        <input type="text" id="name"></input>
-        <label for="mail">Mail</label>
-        <input type="email" id="mail"></input>
+        <Label/>
+        <Break/>
+       <InputText/>
+       <Break/>
+       <Label/>
+       <Break/>
+       <MailText/>
+       <Break/>
+       <Submit/>
+       <Break/>
     </form>
+}
+const Break=()=>{
+    return (<br/>)
+}
+const Label=()=>{
+    return (<label>Name</label>)
+}
+const InputText=()=>{
+    return (<input type="text" id="name"></input>)
+}
+const MailText=()=>{
+    return (<input type="email" id="mail"></input>)
+}
+const Submit=()=>{
+    return (<input type="submit" value="submit" />)
 }

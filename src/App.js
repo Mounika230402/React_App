@@ -26,20 +26,30 @@ import './App.css';
 // export default App;
 
 
-import { ButtonComponent } from "./components/button/button";
-import { Heading1,Heading2,Heading3,Heading4,Heading5,Heading6 } from './components/heading/headings';
-import { TableComponent } from './components/table/table';
+// import { ButtonComponent } from "./components/button/button";
+// import { Heading1,Heading2,Heading3,Heading4,Heading5,Heading6 } from './components/heading/headings';
+// import { TableComponent } from './components/table/table';
+import {ListItems} from './components/task/Jun13'
+import { Image } from './components/image/image';
 function App(){
   return (
     <div>
-      <ButtonComponent></ButtonComponent>
+      {/* <ButtonComponent></ButtonComponent>
       <Heading1></Heading1>
       <Heading2></Heading2>
       <Heading3></Heading3>
       <Heading4></Heading4>
       <Heading5></Heading5>
       <Heading6></Heading6>
-      <TableComponent></TableComponent>
+      <TableComponent></TableComponent> */}
+      
+
+
+          <Image/>
+          
+            <ListItems />
+    
+
     </div>
   )
 }

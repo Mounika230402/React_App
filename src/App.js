@@ -1,18 +1,24 @@
 // import logo from './logo.svg';
 // import './App.css';
-
+// import ShapeExample from './components/carousels/carousels'
+// import DemoCarousel from './components/carousels/class-carousels';
+import FormExample from './components/form/form';
 import "./index.css";
-import Stack from './stack/stack';
+// import Stack from './stack/stack';
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App(){
   return (
     <div>
-     <Stack/>
+     {/* <Stack/> */}
+     {/* <ShapeExample/> */}
+    {/* <DemoCarousel width={"40%"}/> */}
+    <FormExample />
     </div>
   )
 }
 export default App;
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
+
 // function App() {
 //   return (
 //     <div className="App">
@@ -43,7 +49,7 @@ export default App;
 // import { TableComponent } from './components/table/table';
 // import TypesExample from './components/button/button_bootstrap';
 // // import BasicExample from './components/card/card';
-// import ShapeExample from './components/carousels/carousels'
+
 // // import BasicExample from './components/accordion/accordion';
 // import BasicExample from './components/card/card';
 // import CircleComponent from './components/class/circle/circle';

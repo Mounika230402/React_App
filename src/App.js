@@ -4,7 +4,8 @@
 // import DemoCarousel from './components/carousels/class-carousels';
 // import FormExample from './components/form/form';
 // import UseEffectTable from "./components/Recipe_Table/RecipeTable";
-import RecipeList from "./components/Recipe_Table/RecipeListing";
+import DigitalClock from "./components/Digital_Clock/digital_clock";
+// import RecipeList from "./components/Recipe_Table/RecipeListing";
 import "./index.css";
 // import Stack from './stack/stack';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -16,7 +17,8 @@ function App(){
     {/* <DemoCarousel width={"40%"}/> */}
     {/* <FormExample /> */}
     {/* <UseEffectTable /> */}
-    <RecipeList/>
+    {/* <RecipeList/> */}
+    <DigitalClock />
     </div>
   )
 }

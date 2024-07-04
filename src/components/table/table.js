@@ -18,14 +18,3 @@ export const TableComponent=()=>
             </tr>
         </table>
     }
-// export const RowComponent=()=>
-//     {
-//         return <tr>
-//             <DataComponent></DataComponent>
-//             <DataComponent></DataComponent>
-//         </tr>
-//     }
-// export const DataComponent=()=>
-//     {
-//         return (<td>Apple</td>)
-//     }

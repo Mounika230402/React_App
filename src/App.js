@@ -2,7 +2,9 @@
 // import './App.css';
 // import ShapeExample from './components/carousels/carousels'
 // import DemoCarousel from './components/carousels/class-carousels';
-import FormExample from './components/form/form';
+// import FormExample from './components/form/form';
+// import UseEffectTable from "./components/Recipe_Table/RecipeTable";
+import RecipeList from "./components/Recipe_Table/RecipeListing";
 import "./index.css";
 // import Stack from './stack/stack';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,7 +14,9 @@ function App(){
      {/* <Stack/> */}
      {/* <ShapeExample/> */}
     {/* <DemoCarousel width={"40%"}/> */}
-    <FormExample />
+    {/* <FormExample /> */}
+    {/* <UseEffectTable /> */}
+    <RecipeList/>
     </div>
   )
 }

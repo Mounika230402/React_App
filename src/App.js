@@ -7,18 +7,18 @@
 import DigitalClock from "./components/Digital_Clock/digital_clock";
 // import RecipeList from "./components/Recipe_Table/RecipeListing";
 import "./index.css";
-// import Stack from './stack/stack';
+import Stack from './stack/stack';
 import 'bootstrap/dist/css/bootstrap.min.css';
 function App(){
   return (
     <div>
-     {/* <Stack/> */}
+     <Stack/>
      {/* <ShapeExample/> */}
     {/* <DemoCarousel width={"40%"}/> */}
     {/* <FormExample /> */}
     {/* <UseEffectTable /> */}
     {/* <RecipeList/> */}
-    <DigitalClock />
+    {/* <DigitalClock /> */}
     </div>
   )
 }

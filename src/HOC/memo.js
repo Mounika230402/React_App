@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import  Heading1  from "../components/heading/headings";
 
-const MemoExample = (p) => {
+const MemoExample = () => {
     const [state, setstate]=useState(false)
   return (
     <div>

@@ -1,6 +1,9 @@
-export const Heading1 = () => {
+ import React from "react";
+ const Heading1 = () => {
+    console.log("heading is re-rendering")
     return <h1>Heading1</h1>
 }
+export default React.memo(Heading1);
 export const Heading2 = () => {
     return <h2>Heading2</h2>
 }

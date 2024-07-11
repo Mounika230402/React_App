@@ -1,14 +1,17 @@
 import React, { useContext } from "react";
 import Navbar from "../components/navbar/nav";
+import  profile  from "../HOC/Profile";
 import { Profile } from "../stack/stack";
-function HomeScreen(){
+import MemoExample from "../HOC/memo";
+function HomeScreen(prop){
     const sharedData=useContext(Profile)
     console.log(sharedData)
     return(
         <div>
-            <Navbar />
-            <h1>Welcome HomeScreen {sharedData.ProfileInfo.name}</h1>
+            <Navbar theme="true" />
+            <h1>Welcome HomeScreen {prop.data.name}</h1>
+            <MemoExample/>
         </div>
     )
 }
-export default HomeScreen;
+export default profile(HomeScreen);

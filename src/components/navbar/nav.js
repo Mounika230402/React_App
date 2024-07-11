@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-function Navbar() {
+// import hoc from "../../HOC/Profile";
+import profile from "../../HOC/Profile";
+function Navbar(prop) {
   const linkStyle = {
     textDecoration: "none",
     // listType:"none"
@@ -52,4 +53,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default profile(Navbar);

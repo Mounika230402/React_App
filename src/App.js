@@ -4,21 +4,35 @@
 // import DemoCarousel from './components/carousels/class-carousels';
 // import FormExample from './components/form/form';
 // import UseEffectTable from "./components/Recipe_Table/RecipeTable";
+import { useEffect, useMemo, useState } from "react";
 import DigitalClock from "./components/Digital_Clock/digital_clock";
 // import RecipeList from "./components/Recipe_Table/RecipeListing";
 import "./index.css";
 import Stack from './stack/stack';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Kalki from "./Movie/kalki";
 function App(){
+  const [views,setViews]=useState(0)
+  useEffect(()=>{
+    const id=setInterval(()=>{
+      setViews(views=>views+10)
+    },1000);
+    return(()=>clearInterval(id))
+  },[])
+  const Amount=useMemo(()=>{
+    return views*2
+  },[views])
   return (
     <div>
-     <Stack/>
+      <Kalki title="Kalki 2989" views={views} release="july 12"></Kalki>
+     {/* <Stack/> */}
      {/* <ShapeExample/> */}
     {/* <DemoCarousel width={"40%"}/> */}
     {/* <FormExample /> */}
     {/* <UseEffectTable /> */}
     {/* <RecipeList/> */}
     {/* <DigitalClock /> */}
+    <h2>Amount:{Amount}</h2>
     </div>
   )
 }

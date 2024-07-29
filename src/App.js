@@ -1,5 +1,6 @@
 
-import Cardcomponent from "./components/previous and next button";
+// import Cardcomponent from "./components/previous and next button";
+import CountryComponent from "./Country_api";
 import "./index.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,8 +9,7 @@ function App(){
 
   return (
     <div>
-      <Cardcomponent/>
-  
+      <CountryComponent/>
     </div>
   )
 }

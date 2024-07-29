@@ -7,40 +7,28 @@ const CountryComponent = (props) => {
   const[Data,setData]=useState([])
     const[offical,setoffical]=useState([])
     const[country,setCountry]=useState("")
-    // const[countryDetails,setCountryDetails]=useState({})
+
     
     useEffect( ()=>{
         fetchData()
     },[])
-    // useEffect(()=>{
-    //     const response= axios.get("https://restcountries.com/v3.1/name/"+{country}).then(data=>data).catch(err=>console.log("error"))
-    //     console.log(response.data)
-    // },[country])
     const fetchData=async ()=>{
         const response= await axios.get("https://restcountries.com/v3.1/all")
         const{data,status}=response
 
         if(status===200){
-            // const offical=data.map(each=>each.name.official)
-            // setoffical(offical)
             console.log(data)
             setData(data)
         }
     }
-  //   const countryData=async (country)=>{
-  //       const response= await axios.get(`https://restcountries.com/v3.1/name/${country}`)
-  //       setCountryDetails(response.data[0])
-  //       }
     
 
    function CountryHandler(event){
     setCountry(event.target.value)
     console.log(country)
-    // countryData(event.target.value)
-    const offical=Data.filter(each=> each.name.official.includes(event.target.value))
+  
+    const offical=Data.filter(each=> each.name.official.toLowerCase().includes(event.target.value))
     setoffical(offical)
-    // console.log(offical)
-
     }
   return (
     <>

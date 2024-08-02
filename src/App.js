@@ -1,15 +1,22 @@
-
-// import Cardcomponent from "./components/previous and next button";
-import CountryComponent from "./Country_api";
-import "./index.css";
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// import CountryCard from "./Country_api/Country_card";
+import "./index.css";
+import CurrencyConverter from './currency_converter';
+// import CountryComponent from './Country_api/index';
+// import SignIn from './Country_api/google';
+
+// import CountryComponent from './Country_api/index';
 
 function App(){
 
   return (
     <div>
-      <CountryComponent/>
+      {/* <SignIn/> */}
+      {/* <CountryCard/> */}
+    <CurrencyConverter/>
+     {/* <CountryComponent/> */}
+     {/* <CountryCard/> */}
     </div>
   )
 }

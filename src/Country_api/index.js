@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios";
 import CardComponent from "./card";
+import Navbar from "./Navbar";
+import "./index.css"
 
 const CountryComponent = (props) => {
   const[Data,setData]=useState([])
@@ -32,19 +34,20 @@ const CountryComponent = (props) => {
     }
   return (
     <>
-    <input type="text" value={country} onChange={CountryHandler} placeholder="Enter the country" style={{width:"50vw",margin:"3vh 25vw",padding:"2vh",borderRadius:"2vw"}}/>
-    <div style={{display:"grid",gridTemplateColumns:"auto auto auto auto",gap:"2vw",justifyContent:"space-around"}}>
+    <Navbar className="navbar"/>
+    <input type="text" value={country} onChange={CountryHandler} placeholder="Enter the country" className="input-box"/>
+    <div className="card-container">
       {
         offical.length>0 ?
         offical.map((each,index)=>{
           return(
-            <CardComponent country={each.name.official} flag={each.flags.png} population={each.population} capital={each.capital} key={index}/>
+            <CardComponent country={each.name.official} flag={each.flags.png} population={each.population} capital={each.capital} key={index} region={each.region} />
            
           )
         }):
         Data.map((each,index)=>{
           return(
-            <CardComponent country={each.name.official} flag={each.flags.png} population={each.population} capital={each.capital} key={index}/>
+            <CardComponent country={each.name.official} flag={each.flags.png} population={each.population} capital={each.capital} key={index} id={index} region={each.region}/>
            
           )
         })
@@ -58,23 +61,3 @@ const CountryComponent = (props) => {
 export default CountryComponent;
 
 
-// {/* <select onChange={CountryHandler}>
-//         <option value="">Select a country</option>
-//         {
-//             offical.map((eachItem,index)=>{
-//                 return <option value={eachItem} key={index}>{eachItem}</option>
-//             })
-//         }
-//       </select>
-
-//       <h2>{country}</h2>
-//       {
-//         console.log(countryDetails)
-//       }
-//       {
-//         Object.keys(countryDetails).length > 0 && <>
-//         <h2>Capital:{countryDetails.capital[0]}</h2>
-//         <h2>Flag:{countryDetails.flag}</h2>
-//         <img src={countryDetails.flags.png} alt="bdhj"/>
-//         </>
-//       } */}
